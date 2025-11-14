@@ -1,0 +1,10 @@
+node_modules
+.next
+dist
+build
+.vercel
+.turbo
+.pnpm-store
+.DS_Store
+*.log
+*.zip
