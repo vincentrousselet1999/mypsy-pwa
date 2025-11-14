@@ -51,7 +51,7 @@ export async function POST(req: NextRequest) {
         input: message,
       });
       const result = moderation?.results?.[0];
-      const categories = (result?.categories ?? {}) as Record<string, boolean>;
+      const categories = (result?.categories ?? {}) as unknown as Record<string, boolean>;
       const flaggedCrisis = Boolean(
         result?.flagged ||
           categories["self-harm"] ||
